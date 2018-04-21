@@ -19,10 +19,23 @@
 # All numbers should be rounded to the nearest penny. Finally, print the result,
 # which should include the total amount paid that year and the remaining balance. 
 
-float balance = 0.0
-float apy     = 0.0
-float minPay  = 0.0
+balance = 0.0
+apr     = 0.0
+minRate  = 0.0
 
-balance = (float)rawinput("What is your current Balance? ")
-apy     = (float)rawinput("What is the anual interest rate as a decimal? ")
-minPay  = (float)rawinput("What is the minimum payment rate")
+balance = float(raw_input("What is your current Balance? "))
+apr     = float(raw_input("What is the anual interest rate as a decimal? "))
+minRate  = float(raw_input("What is the minimum payment rate as a decimal? "))
+
+minPay    = 0.0
+principle = 0.0
+
+for month in range(1, 13): #runs 12 times
+    print("Month: " + str(month))
+    minPay    = round((balance * minRate), 2)
+    principle = round((minPay - (apr / 12 * balance)), 2)
+    balance   = round((balance - principle), 2)
+
+    print("Minimum monthly payment: " + str(minPay))
+    print("Principle paid:  " + str(principle))
+    print("Remaining balance: " + str(balance))
