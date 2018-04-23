@@ -3,8 +3,8 @@
 # Problem Set 1: 3 Simple Problems - Problem 2 Pay off debt in 1 year
 # Name: Luke Young
 # Collaborators: None
-# Time Spent: 00:00 (hr:min)
-# 2018 04 22 19:37
+# Time Spent: 01:00 (hr:min)
+# 2018 04 22 20:27
 
 # Program: Finding the minimum payment required to pay off the debt
 # 
@@ -28,31 +28,38 @@
 
 balance = 0.0
 apr     = 0.0
-minRate  = 0.0
 
 balance = float(raw_input("What is your current Balance? "))
 apr     = float(raw_input("What is the annual interest rate as a decimal? "))
 
-minPay    = 0.0
-principle = 0.0
-payTotal  = 0.0
+minPay     = 0.0
+principle  = 0.0
+endBalance = 0.0
+paid       = False
 
 # main algorithm
-for month in range(1, 13): #runs 12 times
-    if balance < 0:
-        break
-    
-    minPay    = round((balance * minRate), 2)
-    principle = round((minPay - (apr / 12 * balance)), 2)
-    balance   = round((balance - principle), 2)
-    payTotal += round(minPay, 2)
+while paid == False:
+    tempBalance = balance
+    minPay += 10
 
-    print("Minimum monthly payment: " + str(minPay))
-    print("Principle paid:  " + str(principle))
-    print("Remaining balance: " + str(balance))
-# end for loop
+    month     = 1
+    for month in range(1, 13): #runs 12 times
+        
+        principle = round((minPay - (apr / 12 * tempBalance)), 2)
+        tempBalance   = round((tempBalance - principle), 2)
+
+        if tempBalance < 0:
+            endBalance = tempBalance
+            paid = True
+            break
+    # end for loop
+        
+    # print("Ending balance was: " + str(tempBalance))
+
+# end while loop
 
 # print results
 print("RESULT")
-print("Total amount paid: " + str(payTotal))
-print("Remaining balance: " + str(balance))
+print("Monthly payment to pay off debt in 1 year: " + str(minPay))
+print("Number of months needed: " + str(month))
+print("Balance " + str(endBalance))
