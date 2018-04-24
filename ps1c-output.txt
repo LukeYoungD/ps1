@@ -1,0 +1,48 @@
+What is your current Balance? 999999
+What is the annual interest rate as a decimal? .18
+minPay Value: 91484.0
+Ending balance was: 2554.77
+minPay Value: 95559.38
+Ending balance was: -50593.13
+minPay Value: 93521.69
+Ending balance was: -24019.17
+minPay Value: 92502.85
+Ending balance was: -10732.27
+minPay Value: 91993.43
+Ending balance was: -4088.79
+minPay Value: 91738.72
+Ending balance was: -767.07
+minPay Value: 91611.36
+Ending balance was: 893.85
+minPay Value: 91675.04
+Ending balance was: 63.4
+minPay Value: 91706.88
+Ending balance was: -351.84
+minPay Value: 91690.96
+Ending balance was: -144.22
+minPay Value: 91683.0
+Ending balance was: -40.43
+minPay Value: 91679.02
+Ending balance was: 11.49
+minPay Value: 91681.01
+Ending balance was: -14.46
+minPay Value: 91680.02
+Ending balance was: -1.56
+minPay Value: 91679.52
+Ending balance was: 4.97
+minPay Value: 91679.77
+Ending balance was: 1.71
+minPay Value: 91679.9
+Ending balance was: 0.01
+minPay Value: 91679.96
+Ending balance was: -0.75
+minPay Value: 91679.93
+Ending balance was: -0.38
+minPay Value: 91679.92
+Ending balance was: -0.27
+minPay Value: 91679.91
+Ending balance was: -0.13
+RESULT
+Monthly payment to pay off debt in 1 year: 91679.91
+Number of months needed: 12
+Balance -0.13
